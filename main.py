@@ -15,8 +15,8 @@ import filecmp, os
 
 # НОВАЯ ВЕРСИЯ экспериментальная
 
-api_id = 17876697
-api_hash = 'f57224fa791de500d30a17a4fbb650ec'
+api_id = 
+api_hash = '123'
 client = TelegramClient('anon', api_id, api_hash)
 chat = 418820330  # 'me', 5103866250, 1491627223, 418820330, -741750752(test), -1001299652068(it)
 client.start()
