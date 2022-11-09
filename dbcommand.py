@@ -78,6 +78,17 @@ connGG.execute('''CREATE TABLE Groupdata(
 #            ''')
 
 
+#Main table
+#connGG.execute('''
+#                CREATE TABLE Mainlist2(
+#                TG_Int_ID int primary key,
+#                Telephone_Number float,
+#                LF_Name nvarchar(255),
+#                TG_user_id float,
+#                )
+#                ''')
+
+
 
 connGG.commit()
 
