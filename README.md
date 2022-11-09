@@ -269,3 +269,4 @@ connGG.close()
 global comment 
 """
 
+https://www.sqlshack.com/upload-multiple-images-sql-server/    import image in table
