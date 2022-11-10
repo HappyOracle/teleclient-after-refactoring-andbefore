@@ -89,6 +89,17 @@ connGG.execute('''CREATE TABLE Groupdata(
 #                ''')
 
 
+# Создаем экспериментальную таблицу, для проверки сохранение фотографии.
+#connGG.execute('''CREATE TABLE myimages(id int, img varbinary(max))''')
+
+# Импортируем фотографию из папки в таблицу. Тут в кавычках и иной путь, потому что это не локальный, а сетевое подключение. Потому что папка находиться в сети и бд тоже.
+connGG.execute('''INSERT INTO "DB-TG"."dbo"."myimages" values (1, (SELECT * FROM OPENROWSET(BULK N'\\\wds\BGInfo\\testpicture\\Asssa123.png', SINGLE_BLOB) as T1))''')
+
+# вот и собственно туторил и код для импорта фотографии https://www.sqlshack.com/upload-multiple-images-sql-server/
+
+#connGG.execute('''INSERT INTO adventureworks.dbo.myimages values (1, (SELECT * FROM OPENROWSET(BULK N'C:\\Users\\Administrator\\Testpath\\Asssa123.png' + '\\', SINGLE_BLOB) as T1))''')
+connGG.commit()
+
 
 connGG.commit()
 
